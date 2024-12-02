@@ -1,7 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { say } from "cowsay";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    console.log(say({ text: "Hello World!" }));
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -14,9 +19,7 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        ></a>
       </header>
     </div>
   );
